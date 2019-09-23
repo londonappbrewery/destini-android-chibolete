@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         mStoryPage = 6;
                         mStoryText.setText(R.string.T6_End);
-                        mTopButton.setText("");
-                        mBottomButton.setText("");
+
+                        mTopButton.setVisibility(View.INVISIBLE);
+                        mBottomButton.setText(R.string.Restart_Adventure);
                         break;
                 }
 
@@ -65,14 +66,24 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         mStoryPage = 4;
                         mStoryText.setText(R.string.T4_End);
-                        mTopButton.setText("");
-                        mBottomButton.setText("");
+
+                        mTopButton.setVisibility(View.INVISIBLE);
+                        mBottomButton.setText(R.string.Restart_Adventure);
                         break;
                     case 3:
                         mStoryPage = 5;
                         mStoryText.setText(R.string.T5_End);
-                        mTopButton.setText("");
-                        mBottomButton.setText("");
+
+                        mTopButton.setVisibility(View.INVISIBLE);
+                        mBottomButton.setText(R.string.Restart_Adventure);
+                        break;
+                    default:
+                        mStoryPage = 1;
+                        mStoryText.setText(R.string.T1_Story);
+                        mTopButton.setVisibility(View.VISIBLE);
+                        mTopButton.setText(R.string.T1_Ans1);
+                        mBottomButton.setText(R.string.T1_Ans2);
+
                 }
 
             }
